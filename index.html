@@ -1,0 +1,802 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/all.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600&display=swap" rel="stylesheet">
+
+    <title>Nebula</title>
+</head>
+
+<body class="bg-dark text-light">
+
+    <!-- --------------------------------HEADER----------------------------- -->
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark px-5 fixed-top">
+            <div class="container-fluid">
+                <img src="images/logo.png" alt="logo" width="50" height="50" class="me-2">
+                <h2 class="pe-4 border-end">Nebula</h2>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse ps-4" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active text-light" aria-current="page" href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-light" href="#">Planets</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle text-light" href="#" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Explore
+                            </a>
+                            <ul class="dropdown-menu bg-dark">
+                                <li><a class="dropdown-item text-light" href="#">Galaxies</a></li>
+                                <li><a class="dropdown-item text-light" href="#">Black Holes</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item text-light" href="#">Space Stations</a></li>
+                                <li><a class="dropdown-item text-light" href="#">Tools</a></li>
+                                <li><a class="dropdown-item text-light" href="#">Stars</a></li>
+                                <li><a class="dropdown-item text-light" href="#">More...</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-light" href="#">Research</a>
+                        </li>
+                    </ul>
+
+                    <form class="d-flex" role="search">
+                        <input class="form-control me-2 bg-dark" type="search" placeholder="Search"
+                            aria-label="Search" />
+                        <button class="btn btn-primary me-2 text-light" type="submit">Search</button>
+
+                        <!-- Button to Open the Modal -->
+                        <button type="button" class="btn btn-outline-primary text-light" data-bs-toggle="modal"
+                            data-bs-target="#myModal">
+                            Login
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- The Modal -->
+    <div class="modal fade" id="myModal">
+        <div class="modal-dialog">
+            <div class="modal-content bg-dark text-light">
+
+                <!-- Modal Header -->
+                <div class="modal-header border-0">
+                    <h4 class="modal-title">Login</h4>
+                    <button type="button" class="btn-close text-light bg-light" data-bs-dismiss="modal"></button>
+                </div>
+
+                <!-- Modal body -->
+                <div class="modal-body">
+                    <form action="/action_page.php">
+                        <div class="mb-3 mt-3">
+                            <label for="email" class="form-label">Email Address:</label>
+                            <input type="email" class="form-control text-light border-light bg-dark" id="email"
+                                placeholder="Enter email" name="email">
+                        </div>
+                        <div class="mb-3">
+                            <label for="pwd" class="form-label">Password:</label>
+                            <input type="password" class="form-control text-light border-light bg-dark" id="pwd"
+                                placeholder="Enter password" name="pswd">
+                        </div>
+                        <div class="form-check mb-3">
+                            <label class="form-check-label">
+                                <input class="form-check-input bg-dark text-light border-light" type="checkbox"
+                                    name="remember">
+                                Remember me
+                            </label>
+                        </div>
+                    </form>
+                </div>
+
+                <!-- Modal footer -->
+                <div class="modal-footer border-0">
+                    <button type="button" class="btn btn-primary w-100 text-light"
+                        data-bs-dismiss="modal">login</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- -------------------------------SLIDER--------------------------- -->
+    <main>
+        <div id="carouselExampleCaptions" class="carousel slide vh-100">
+            <div class="carousel-indicators mb-0">
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+                    aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+                    aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+                    aria-label="Slide 3"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3"
+                    aria-label="Slide 4"></button>
+            </div>
+            <div class="carousel-inner h-100">
+                <div class="carousel-item active h-100">
+                    <img src="images/slider1.jpeg" class="d-block w-100 vh-100" alt="...">
+                    <div class="carousel-caption rounded">
+                        <h5>Into the Cosmos</h5>
+                        <p>A deep dive into the beauty and secrets of outer space.</p>
+                        <button class="btn btn-outline-primary text-light text-center">Call Us</button>
+                    </div>
+                </div>
+                <div class="carousel-item h-100">
+                    <img src="images/slider2.jpeg" class="d-block w-100 vh-100" alt="...">
+                    <div class="carousel-caption rounded">
+                        <h5>Journey Beyond Earth</h5>
+                        <p>Travel through space and learn about planets, missions, and the future of human exploration.
+                        </p>
+                        <button class="btn btn-outline-primary text-light text-center">Call Us</button>
+                    </div>
+                </div>
+                <div class="carousel-item h-100">
+                    <img src="images/slider3.jpeg" class="d-block w-100 vh-100" alt="...">
+                    <div class="carousel-caption rounded">
+                        <h5>The Power of the Cosmos</h5>
+                        <p>From massive black holes to brilliant supernovas, explore the forces that shape our universe.
+                        </p>
+                        <button class="btn btn-outline-primary text-light text-center">Call Us</button>
+                    </div>
+                </div>
+                <div class="carousel-item h-100">
+                    <img src="images/slider4.jpeg" class="d-block w-100 vh-100" alt="...">
+                    <div class="carousel-caption rounded">
+                        <h5>Beyond the Unknown</h5>
+                        <p>Exploring what lies beyond human knowledge.</p>
+                        <button class="btn btn-outline-primary text-light text-center">Call Us</button>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </main>
+
+    <!-- Social Icons -->
+    <div class="social-links d-flex flex-column position-fixed top-50 end-0 translate-middle-y me-1 fs-2 z-3">
+        <a href="#" class="social-icon text-light"><i class="fab fa-facebook-square"></i></a>
+        <a href="#" class="social-icon text-light"><i class="fab fa-twitter-square"></i></a>
+        <a href="#" class="social-icon text-light"><i class="fab fa-whatsapp-square"></i></a>
+        <a href="#" class="social-icon text-light"><i class="fab fa-instagram-square"></i></a>
+        <a href="#" class="social-icon text-light"><i class="fab fa-linkedin"></i></a>
+    </div>
+
+    <!-- --------------------------WELCOME------------------------------------ -->
+    <div class="container my-5 text-white">
+        <h1>Welcome</h1>
+        <p>Welcome to Nebula Explorer – embark on a journey beyond the stars, where mysteries of the cosmos unfold
+            before your eyes. Whether you dream of distant galaxies, dazzling supernovas, or the silent beauty of black
+            holes — we bring the universe closer to you. Step into a realm where exploration meets wonder, and let your
+            curiosity soar through the infinite expanse of space.</p>
+        <button type="button" class="btn btn-primary text-light">Learn More</button>
+    </div>
+
+    <hr>
+
+    <!-- ---------------------------------Most Famous--------------------------- -->
+    <div class="container my-5">
+        <h1 class="text-center mb-3 title p-3">The Most Famous Wonders of Our Universe</h1>
+
+        <div class="accordion accordion-flush text-light" id="accordionFlushExample">
+            <div class="accordion-item text-light">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed text-light" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                        Celestial Bodies
+                    </button>
+                </h2>
+                <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">Explore the breathtaking beauty of planets, stars, and moons. Witness
+                        the glowing rings of Saturn, the swirling storms of Jupiter, and icy worlds like Europa and
+                        Enceladus, each with its own mysterious charm.</div>
+                </div>
+            </div>
+            <div class="accordion-item text-light">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed text-light" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                        Galaxies
+                    </button>
+                </h2>
+                <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">Journey through vast galaxies far beyond our Milky Way. From spiral
+                        galaxies twirling elegantly in space to massive elliptical giants, every galaxy tells a story of
+                        cosmic evolution and endless wonder.</div>
+                </div>
+            </div>
+            <div class="accordion-item text-light">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed text-light" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                        Black Holes
+                    </button>
+                </h2>
+                <div id="flush-collapseThree" class="accordion-collapse collapse"
+                    data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">Delve into the enigmatic darkness of black holes. Discover how these
+                        cosmic giants bend space and time, holding secrets that challenge our understanding of the
+                        universe itself.</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <hr>
+
+    <!-- -------------------TRANSLATE1---------------------------------- -->
+    <div class="container my-5">
+        <h1 class="text-center mb-3 title p-3">Translate from Arabic to English</h1>
+
+        <h5>Write And Translate <span class="text-primary">Press Here</span></h5>
+
+        <!-- Button to Open the Modal -->
+        <button type="button" class="btn btn-primary text-light copy-btn position-relative" data-bs-toggle="modal"
+            data-bs-target="#myModal2">
+            Copy
+            <span
+                class="copied badge bg-secondary position-absolute top-50 start-100 translate-middle-y ms-2 d-none">Copied!</span>
+        </button>
+
+        <!-- The Modal -->
+        <div class="modal fade" id="myModal2">
+            <div class="modal-dialog">
+                <div class="modal-content bg-dark text-light">
+
+                    <!-- Modal Header -->
+                    <div class="modal-header">
+                        <h4 class="modal-title">Nebula</h4>
+                        <button type="button" class="btn-close bg-light" data-bs-dismiss="modal"></button>
+                    </div>
+
+                    <!-- Modal body -->
+                    <div class="modal-body">
+                        The Message Copied
+                    </div>
+
+                    <!-- Modal footer -->
+                    <div class="modal-footer border-0">
+                        <button type="button" class="btn btn-primary text-light" data-bs-dismiss="modal">ok</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="form-floating mt-4">
+            <textarea class="form-control text-light border-light bg-dark" id="floatingTextarea2"
+                placeholder="Translate:" style="height: 150px;"></textarea>
+        </div>
+    </div>
+
+    <hr>
+
+    <!-- -------------------TRANSLATE2---------------------------------- -->
+    <div class="container my-5">
+        <h1 class="text-center mb-3 title p-3">Translate from Arabic to Frensh</h1>
+
+        <h5>Write And Translate <span class="text-primary">Press Here</span></h5>
+
+        <!-- Button to Open the Modal -->
+        <button type="button" class="btn btn-primary text-light copy-btn position-relative" data-bs-toggle="modal"
+            data-bs-target="#myModal3">
+            Copy
+            <span
+                class="copied badge bg-secondary position-absolute top-50 start-100 translate-middle-y ms-2 d-none">Copied!</span>
+        </button>
+
+        <!-- The Modal -->
+        <div class="modal fade" id="myModal3">
+            <div class="modal-dialog">
+                <div class="modal-content bg-dark text-light">
+
+                    <!-- Modal Header -->
+                    <div class="modal-header">
+                        <h4 class="modal-title">Nebula</h4>
+                        <button type="button" class="btn-close bg-light" data-bs-dismiss="modal"></button>
+                    </div>
+
+                    <!-- Modal body -->
+                    <div class="modal-body">
+                        The Message Copied
+                    </div>
+
+                    <!-- Modal footer -->
+                    <div class="modal-footer border-0">
+                        <button type="button" class="btn btn-primary text-light" data-bs-dismiss="modal">ok</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="form-floating mt-4">
+            <textarea class="form-control text-light border-light bg-dark" id="floatingTextarea2"
+                placeholder="Translate:" style="height: 150px;"></textarea>
+        </div>
+    </div>
+
+    <hr>
+
+    <!-- -------------------TRANSLATE3---------------------------------- -->
+    <div class="container my-5">
+        <h1 class="text-center mb-3 title p-3">Translate from Arabic to German</h1>
+
+        <h5>Write And Translate <span class="text-primary">Press Here</span></h5>
+
+        <!-- Button to Open the Modal -->
+        <button type="button" class="btn btn-primary text-light copy-btn position-relative" data-bs-toggle="modal"
+            data-bs-target="#myModal4">
+            Copy
+            <span
+                class="copied badge bg-secondary position-absolute top-50 start-100 translate-middle-y ms-2 d-none">Copied!</span>
+        </button>
+
+        <!-- The Modal -->
+        <div class="modal fade" id="myModal4">
+            <div class="modal-dialog">
+                <div class="modal-content bg-dark text-light">
+
+                    <!-- Modal Header -->
+                    <div class="modal-header">
+                        <h4 class="modal-title">Nebula</h4>
+                        <button type="button" class="btn-close bg-light" data-bs-dismiss="modal"></button>
+                    </div>
+
+                    <!-- Modal body -->
+                    <div class="modal-body">
+                        The Message Copied
+                    </div>
+
+                    <!-- Modal footer -->
+                    <div class="modal-footer border-0">
+                        <button type="button" class="btn btn-primary text-light" data-bs-dismiss="modal">ok</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="form-floating mt-4">
+            <textarea class="form-control text-light border-light bg-dark" id="floatingTextarea2"
+                placeholder="Translate:" style="height: 150px;"></textarea>
+        </div>
+    </div>
+
+    <hr>
+
+    <!-- ------------------------------POPULAR---------------------------------------- -->
+    <div class="bg w-100"></div>
+
+    <div class="my-5">
+        <h1 class="title mb-5 p-3 text-center">..Popular Wonders of the Universe..</h1>
+
+        <div class="container">
+            <div class="row g-4 justify-content-center">
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card text-light p-2 h-100 position-relative">
+                        <img class="card-img-top h-50" src="images/card1.jpeg" alt="Card image">
+                        <div class="card-body d-flex flex-column">
+                            <h4 class="card-title">Celestial Bodies</h4>
+                            <a href="#" class="btn btn-primary text-light my-3 ms-auto">SHOW</a>
+                            <p class="card-text">Explore planets, moons, and stars, each with unique features and cosmic
+                                beauty.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card text-light p-2 h-100 position-relative">
+                        <img class="card-img-top h-50" src="images/card2.jpeg" alt="Card image">
+                        <div class="card-body d-flex flex-column">
+                            <h4 class="card-title">Galaxies</h4>
+                            <a href="#" class="btn btn-primary text-light my-3 ms-auto">SHOW</a>
+                            <p class="card-text">Journey through spiral, elliptical, and irregular galaxies far beyond
+                                our Milky Way.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card text-light p-2 h-100 position-relative">
+                        <img class="card-img-top h-50" src="images/card3.jpeg" alt="Card image">
+                        <div class="card-body d-flex flex-column">
+                            <h4 class="card-title">Nebulae</h4>
+                            <a href="#" class="btn btn-primary text-light my-3 ms-auto">SHOW</a>
+                            <p class="card-text">Marvel at clouds of gas and dust where new stars are born, painting the
+                                cosmos in colors.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card text-light p-2 h-100 position-relative">
+                        <img class="card-img-top h-50" src="images/card4.jpeg" alt="Card image">
+                        <div class="card-body d-flex flex-column">
+                            <h4 class="card-title">Black Holes</h4>
+                            <a href="#" class="btn btn-primary text-light my-3 ms-auto">SHOW</a>
+                            <p class="card-text">Delve into the enigmatic giants that bend space and time with immense
+                                gravity.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card text-light p-2 h-100 position-relative">
+                        <img class="card-img-top h-50" src="images/card5.jpeg" alt="Card image">
+                        <div class="card-body d-flex flex-column">
+                            <h4 class="card-title">Exoplanets</h4>
+                            <a href="#" class="btn btn-primary text-light my-3 ms-auto">SHOW</a>
+                            <p class="card-text">Discover worlds orbiting distant stars, some potentially habitable for
+                                life.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card text-light p-2 h-100 position-relative">
+                        <img class="card-img-top h-50" src="images/card6.jpeg" alt="Card image">
+                        <div class="card-body d-flex flex-column">
+                            <h4 class="card-title">Comets & Asteroids</h4>
+                            <a href="#" class="btn btn-primary text-light my-3 ms-auto">SHOW</a>
+                            <p class="card-text">Follow icy travelers and rocky wanderers that streak across the solar
+                                system.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card text-light p-2 h-100 position-relative">
+                        <img class="card-img-top h-50" src="images/card6.jpeg" alt="Card image">
+                        <div class="card-body d-flex flex-column">
+                            <h4 class="card-title">Supernovae</h4>
+                            <a href="#" class="btn btn-primary text-light my-3 ms-auto">SHOW</a>
+                            <p class="card-text">Witness the explosive deaths of massive stars, lighting up the universe
+                                with brilliance.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card text-light p-2 h-100 position-relative">
+                        <img class="card-img-top h-50" src="images/card8.jpeg" alt="Card image">
+                        <div class="card-body d-flex flex-column">
+                            <h4 class="card-title">Cosmic Radiation</h4>
+                            <a href="#" class="btn btn-primary text-light my-3 ms-auto">SHOW</a>
+                            <p class="card-text">Explore the invisible forces and energetic particles shaping the
+                                universe around us.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="bg w-100"></div>
+
+    <hr>
+
+    <!-- ------------------------THANKS---------------------------------------------- -->
+    <div class="my-5">
+        <h1 class="title mb-5 p-3 text-center">..Thanks For..</h1>
+
+        <div class="container mt-5">
+            <div class="row g-5 justify-content-center">
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div
+                        class="thanks thanks1 position-relative rounded-5 border border-1 border-secondary text-light mx-auto py-3 px-1">
+                        <div class="w-100 h-100 position-absolute top-0 start-0 bg-dark opacity-75"></div>
+
+                        <div class="position-relative text-white p-2">
+                            <div class="mb-5">
+                                <h6 class="fst-italic">All Thanks And Appreciation</h6>
+                                <p><i class="fa-solid fa-clock"></i> June 22, 2023</p>
+                            </div>
+
+                            <div>
+                                <img src="images/person1.jpeg" alt="per1"
+                                    class="w-25 h-25 rounded-circle border border-1 border-light mb-2 mt-3">
+                                <p class="mb-0">Eng.Salem Mohamed</p>
+                                <p class="fst-italic">Director Of UI/UX</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div
+                        class="thanks thanks2 position-relative rounded-5 border border-1 border-secondary text-light mx-auto py-3 px-1">
+                        <div class="w-100 h-100 position-absolute top-0 start-0 bg-dark opacity-75"></div>
+
+                        <div class="position-relative text-white p-2">
+                            <div class="mb-5">
+                                <h6 class="fst-italic">All Thanks And Appreciation</h6>
+                                <p><i class="fa-solid fa-clock"></i> June 22, 2023</p>
+                            </div>
+
+                            <div>
+                                <img src="images/person2.jpeg" alt="per2"
+                                    class="w-25 h-25 rounded-circle border border-1 border-light mb-2 mt-3">
+                                <p class="mb-0">Eng. Mohamed Ilady</p>
+                                <p class="fst-italic">Content Creator</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div
+                        class="thanks thanks3 position-relative rounded-5 border border-1 border-secondary text-light mx-auto py-3 px-1">
+                        <div class="w-100 h-100 position-absolute top-0 start-0 bg-dark opacity-75"></div>
+
+                        <div class="position-relative text-white p-2">
+                            <div class="mb-5">
+                                <h6 class="fst-italic">All Thanks And Appreciation</h6>
+                                <p><i class="fa-solid fa-clock"></i> June 22, 2023</p>
+                            </div>
+
+                            <div>
+                                <img src="images/person3.jpeg" alt="per3"
+                                    class="w-25 h-25 rounded-circle border border-1 border-light mb-2 mt-3">
+                                <p class="mb-0">Eng. Amgad Fathy</p>
+                                <p class="fst-italic">Web Developer</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ---------------------------------NEWS---------------------------------- -->
+    <div class="container my-5">
+        <h1 class="mb-5 pt-5 text-center">Nebula News</h1>
+
+        <div class="news row rounded-4 overflow-hidden text-light mb-4">
+
+            <div class="col-md-8 p-4 order-2 order-md-1">
+                <h3 class="new-title fw-bold fst-italic">Journey Through The Universe</h3>
+                <small class="mb-3 border-bottom border-2 border-primary d-inline-block">Sat. Apr 9th 2025</small>
+
+                <p>
+                    Space Is An Endless Canvas Of Mystery And Possibility. Every Star Holds A Story, And Every Planet
+                    Awaits Exploration. We Venture Beyond Known Boundaries To Discover New Worlds And Expand Human
+                    Knowledge. Stay Updated With Our Cosmic Reports, Breakthrough Missions, And Revolutionary
+                    Technologies Designed To Take Humanity Further Than Ever Before. The Universe Is Calling.
+                </p>
+
+                <div class="d-flex gap-2 mt-4">
+                    <button class="btn btn-primary text-white">
+                        <i class="fa-solid fa-microphone"></i> Podcast
+                    </button>
+                    <button class="btn btn-primary text-white">
+                        <i class="fa-solid fa-clock"></i> 48 mins
+                    </button>
+                    <button class="btn btn-primary text-white">
+                        <i class="fa-solid fa-play"></i> Play Episode
+                    </button>
+                </div>
+            </div>
+
+            <!-- Image -->
+            <div class="col-md-4 p-0 image-box order-1 order-md-2 overflow-hidden">
+                <img src="images/journey.jpeg" class="w-100 h-100 object-fit-cover" alt="">
+            </div>
+
+        </div>
+
+        <div class="news row rounded-4 overflow-hidden text-light mb-4">
+
+            <div class="col-md-8 p-4 order-2">
+                <h3 class="new-title fw-bold fst-italic">Stellar Horizons</h3>
+                <small class="mb-3 border-bottom border-2 border-primary d-inline-block">Mon. Jan 21st 2025</small>
+
+                <p>
+                    Among The Stars, Innovation Finds Its True Meaning. Our Exploration Goes Beyond Observation To
+                    Understanding The Forces That Shape The Cosmos. From Advanced Spacecraft To Deep Space Discoveries,
+                    We Share A Vision Of Progress Fueled By Curiosity And Science. Join Us As We Unveil New Horizons,
+                    Mission Insights, And The Future Of Humanity’s Presence In Space.
+                </p>
+
+                <div class="d-flex gap-2 mt-4">
+                    <button class="btn btn-primary text-white">
+                        <i class="fa-solid fa-microphone"></i> Podcast
+                    </button>
+                    <button class="btn btn-primary text-white">
+                        <i class="fa-solid fa-clock"></i> 38 mins
+                    </button>
+                    <button class="btn btn-primary text-white">
+                        <i class="fa-solid fa-play"></i> Play Episode
+                    </button>
+                </div>
+            </div>
+
+            <!-- Image -->
+            <div class="col-md-4 p-0 image-box2 order-1 overflow-hidden">
+                <img src="images/Stellar.jpeg" class="w-100 h-100 object-fit-cover" alt="">
+            </div>
+
+        </div>
+
+        <div class="news row rounded-4 overflow-hidden text-light mb-4">
+
+            <div class="col-md-8 p-4 order-2 order-md-1">
+                <h3 class="new-title fw-bold fst-italic">Mission Log</h3>
+                <small class="mb-3 border-bottom border-2 border-primary d-inline-block">Fri. Aug 14th 2025</small>
+
+                <p>
+                    Beyond The Stars, Our Journey Begins Where Curiosity Never Sleeps. Space Is Not Just A Destination;
+                    It Is A Realm Of Endless Discovery And Innovation. From Distant Galaxies To Uncharted Planets, We
+                    Explore The Unknown To Push The Limits Of Human Imagination. Stay Connected With Our Mission Updates
+                    To Discover New Findings, Technological Breakthroughs, And Stories From The Edge Of The Universe.
+                    This Is Where Exploration Meets Inspiration.
+                </p>
+
+                <div class="d-flex gap-2 mt-4">
+                    <button class="btn btn-primary text-white">
+                        <i class="fa-solid fa-microphone"></i> Podcast
+                    </button>
+                    <button class="btn btn-primary text-white">
+                        <i class="fa-solid fa-clock"></i> 43 mins
+                    </button>
+                    <button class="btn btn-primary text-white">
+                        <i class="fa-solid fa-play"></i> Play Episode
+                    </button>
+                </div>
+            </div>
+
+            <!-- Image -->
+            <div class="col-md-4 p-0 image-box order-1 order-md-2 overflow-hidden">
+                <img src="images/mission.jpeg" class="w-100 h-100 object-fit-cover" alt="">
+            </div>
+
+        </div>
+
+        <div class="news row rounded-4 overflow-hidden text-light mb-4">
+
+            <div class="col-md-8 p-4 order-2">
+                <h3 class="new-title fw-bold fst-italic">Cosmic Exploration</h3>
+                <small class="mb-3 border-bottom border-2 border-primary d-inline-block">Tue. Nov 3rd 2025</small>
+
+                <p>
+                    In The Vast Silence Of Space, Ideas Travel Faster Than Light. Our Mission Is Driven By Passion For
+                    Discovery, Innovation, And The Desire To Understand The Universe Around Us. From Stellar Phenomena
+                    To Deep Space Missions, We Bring You Closer To The Wonders Beyond Earth. Follow Our Journey For The
+                    Latest Discoveries, Scientific Insights, And Milestones That Shape The Future Of Space Exploration.
+                </p>
+
+                <div class="d-flex gap-2 mt-4">
+                    <button class="btn btn-primary text-white">
+                        <i class="fa-solid fa-microphone"></i> Podcast
+                    </button>
+                    <button class="btn btn-primary text-white">
+                        <i class="fa-solid fa-clock"></i> 35 mins
+                    </button>
+                    <button class="btn btn-primary text-white">
+                        <i class="fa-solid fa-play"></i> Play Episode
+                    </button>
+                </div>
+            </div>
+
+            <!-- Image -->
+            <div class="col-md-4 p-0 image-box2 order-1 overflow-hidden">
+                <img src="images/Cosmic.jpeg" class="w-100 h-100 object-fit-cover" alt="">
+            </div>
+
+        </div>
+    </div>
+
+    <!-- --------------------------------SUBSCRIBE--------------------------- -->
+    <div class="container my-5">
+        <div class="row g-5 justify-content-center mx-5">
+            <div class="col-12 col-md-6 col-lg-3">
+                <div class="subscribe border border-1 border-secondary text-center py-2 my-5">
+                    <h5 class="fst-italic">Subscribe Now</h5>
+                    <img src="images/WhatsApp.png" alt="WhatsApp" class="w-50 h-50">
+                    <p><a href="#" class="text-decoration-none">Go To Link</a></p>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-6 col-lg-3">
+                <div class="subscribe border border-1 border-secondary text-center py-2 my-5">
+                    <h5 class="fst-italic">Subscribe Now</h5>
+                    <img src="images/instagram.png" alt="instagram" class="w-50 h-50">
+                    <p><a href="#" class="text-decoration-none">Go To Link</a></p>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-6 col-lg-3">
+                <div class="subscribe border border-1 border-secondary text-center py-2 my-5">
+                    <h5 class="fst-italic">Subscribe Now</h5>
+                    <img src="images/Linkedin.png" alt="Linkedin" class="w-50 h-50">
+                    <p><a href="#" class="text-decoration-none">Go To Link</a></p>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-6 col-lg-3">
+                <div class="subscribe border border-1 border-secondary text-center py-2 my-5">
+                    <h5 class="fst-italic">Subscribe Now</h5>
+                    <img src="images/Twitter.png" alt="Twitter" class="w-50 h-50">
+                    <p><a href="#" class="text-decoration-none">Go To Link</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ----------------------------FOOTER------------------------------ -->
+    <div class="footer mt-5 mb-0 py-3">
+        <hr>
+        <div class="container">
+            <div class="row g-0 justify-content-center">
+                <div class="col-12 col-md-6 col-lg-4 text-center">
+                    <img src="images/footer1.png" alt="logo" width="120" height="120">
+                    <h4>SpaceExpress</h4>
+                    <hr>
+                    <p>Tel: +20 100 123 4567</p>
+                    <p>Location: Cairo Space Hub, Egypt</p>
+                    <p>Email: contact@spaceexpress.com</p>
+                </div>
+
+                <div class="col-12 col-md-6 col-lg-4 text-center">
+                    <img src="images/footer2.png" alt="logo" width="120" height="120">
+                    <h4>Mission Control</h4>
+                    <hr>
+                    <p><a href="#" class="text-light text-decoration-none">Our Missions</a></p>
+                    <p><a href="#" class="text-light text-decoration-none">Space News</a></p>
+                    <p><a href="#" class="text-light text-decoration-none">Launch Schedule</a></p>
+                </div>
+
+                <div class="col-12 col-md-6 col-lg-4 text-center">
+                    <img src="images/footer3.png" alt="logo" width="120" height="120">
+                    <h4>Our Vision</h4>
+                    <hr>
+                    <p>Connecting humanity to the stars.</p>
+                    <p>Innovating space travel and exploration.</p>
+                    <p>Inspiring future generations beyond Earth.</p>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <h5 class="text-primary text-center">
+            &copy; 2025 SpaceExpress. All Rights Reserved. Designed for the Universe
+        </h5>
+    </div>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <!-- <script src="js/bootstrap.min.js"></script> -->
+</body>
+
+</html>

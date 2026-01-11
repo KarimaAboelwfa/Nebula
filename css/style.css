@@ -1,0 +1,154 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: all 0.5s;
+}
+
+body {
+    font-family: 'Orbitron', sans-serif;
+}
+
+.navbar,
+.accordion-item,
+.accordion-button,
+.title,
+.card,
+.news {
+    background: radial-gradient(circle at top, #1b2735, #090a0f) !important;
+}
+
+.nav-link:focus {
+    color: rgb(13, 110, 253) !important;
+    border: 1px solid rgb(13, 110, 253);
+    border-radius: 10px;
+}
+
+.btn:hover {
+    box-shadow: 0 0 15px rgb(13, 110, 253);
+}
+
+.nav-link:hover,
+.social-icon:hover {
+    color: rgb(13, 110, 253) !important;
+}
+
+.dropdown-menu .dropdown-item:hover {
+    color: #000 !important;
+    background-color: rgb(13, 110, 253);
+}
+
+.carousel-item img {
+    object-fit: cover;
+}
+
+.carousel-caption {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.copy-btn:active .copied {
+    display: inline-block !important;
+}
+
+.bg {
+    height: 280px;
+    background-image: url("../images/bg2.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+::placeholder {
+    color: #a1a1a1 !important;
+}
+
+.card::after,
+.card::before {
+    position: absolute;
+    content: "";
+    width: 0;
+    height: 0;
+    background-color: rgb(13, 110, 253);
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.card::after {
+    top: 0;
+    left: 0;
+}
+
+.card::before {
+    bottom: 0;
+    right: 0;
+}
+
+.card:hover::after,
+.card:hover::before {
+    width: 100%;
+    height: 100%;
+    opacity: 0.2;
+}
+
+.thanks {
+    width: 280px;
+    height: 300px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.thanks1 {
+    background-image: url("../images/person1.jpeg");
+}
+
+.thanks2 {
+    background-image: url("../images/person2.jpeg");
+}
+
+.thanks3 {
+    background-image: url("../images/person3.jpeg");
+}
+
+.thanks:hover {
+    transform: scale(0.9);
+    cursor: pointer;
+}
+
+.object-fit-cover {
+    object-fit: cover;
+}
+
+.news:hover img {
+    transform: scale(1.1);
+}
+
+.subscribe:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+.subscribe,
+.news {
+    box-shadow: 3px 3px 8px rgb(13, 110, 253);
+}
+
+.footer {
+    background-image: url(../images/bg-footer.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.footer a:hover {
+    color: rgb(13, 110, 253) !important;
+}
+
+@media (min-width: 768px) {
+    .image-box {
+        clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 25% 100%);
+    }
+
+    .image-box2 {
+        clip-path: polygon(0% 0%, 100% 0%, 75% 100%, 0% 100%);
+    }
+}
